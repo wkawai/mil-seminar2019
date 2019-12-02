@@ -1,8 +1,9 @@
 import argparse
-from task import Task
-from preprocess import select_preprocess
-from nas import nas
+
 from hyperparam import tune_hyperparams
+from nas import nas
+from preprocess import select_preprocess
+from task import Task
 
 
 def main():

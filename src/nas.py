@@ -1,8 +1,15 @@
-def nas(args, task, preprocess_func):
+from argparse import Namespace
+from task import Task
+from preprocess import BasePreprocessor
+from torch.nn import Module
+from typing import Type
+
+
+def nas(args: Namespace, task: Task, preprocess_func: Type[BasePreprocessor]) -> Module:
     ''' Network Architecture Search method
 
     Given task and preprocess function, this method returns a model output by NAS.
-    
+
     The implementation of DARTS is available at https://github.com/alphadl/darts.pytorch1.1 
     '''
 

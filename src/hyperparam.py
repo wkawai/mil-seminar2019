@@ -1,3 +1,12 @@
+from argparse import Namespace
+
+from torch.nn import Module
+
+from preprocess import BasePreprocessor
+from task import Task
+from typing import Type
+
+
 class Hyperparams:
     ''' Hyperparameter class
 
@@ -12,7 +21,7 @@ class Hyperparams:
         self.hyperparam2 = 1.0
 
 
-def tune_hyperparams(args, task, preprocess_func, model):
+def tune_hyperparams(args: Namespace, task: Task, preprocess_func: Type[BasePreprocessor], model: Module) -> Hyperparams:
     ''' Tune hyperparameters
 
     Given task, preprocess function, and model, this method returns tuned hyperparameters.
