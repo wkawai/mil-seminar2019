@@ -16,7 +16,7 @@ class Hyperparams:
 
     '''
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self):
         self.hyperparam1 = 0.1
         self.hyperparam2 = 1.0
 
