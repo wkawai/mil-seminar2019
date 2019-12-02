@@ -1,10 +1,10 @@
 from argparse import Namespace
+from typing import Type
 
 from torch.nn import Module
 
 from preprocess import BasePreprocessor
 from task import Task
-from typing import Type
 
 
 class Hyperparams:

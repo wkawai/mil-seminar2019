@@ -1,6 +1,7 @@
 from argparse import Namespace
-from task import Task
 from typing import Type
+
+from task import Task
 
 
 class BasePreprocessor:
