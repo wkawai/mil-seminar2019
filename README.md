@@ -5,3 +5,9 @@ MIL Seminar 2019
 ```
 python main.py --task cifer100 --gpu 0
 ```
+
+- run batch script on reedbush
+```
+qsub run.sh
+rbstat
+```
