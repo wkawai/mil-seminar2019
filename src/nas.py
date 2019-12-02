@@ -1,7 +1,9 @@
+<<<<<<< HEAD
 from argparse import Namespace
 from task import Task
 from preprocess import BasePreprocessor
 from torch.nn import Module
+import torch.nn as nn
 from typing import Type
 
 
@@ -14,7 +16,7 @@ def nas(args: Namespace, task: Task, preprocess_func: Type[BasePreprocessor]) ->
     '''
 
     # TODO: Replace model with the output by NAS
-    model = torch.nn.Linear(?, task.n_classes)
-
+    model = nn.Linear(task.input_shape[0]*task.input_shape[1]*task.input_shape[2], task.n_classes)
+    
     # return a neural network model (torch.nn.Module)
     return model

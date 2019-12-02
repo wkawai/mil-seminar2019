@@ -12,6 +12,7 @@ class Task:
             self.type = 'classification'
             self.n_classes = 100
             self.input = 'rgb_image'
+            self.input_shape = (3, 32, 32)
             self.evaluation_metric = 'accuracy'
         else:
             raise NotImplementedError
