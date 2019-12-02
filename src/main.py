@@ -23,13 +23,19 @@ def main():
     task = Task(args.task)
 
     # Select optimal preprocess
+    print('Start preprocess selection.')
     preprocess_func = select_preprocess(args, task)
+    print('Finished.')
 
     # Design optimal network architecture
+    print('Start Network Architecture search.')
     model = nas(args, task, preprocess_func)
+    print('Finished.')
 
     # Tune hyperparamters
+    print('Start hyperparameter tuning.')
     hyperparams = tune_hyperparams(args, task, preprocess_func, model)
+    print('Finished.')
 
     return preprocess_func, model, hyperparams
 
