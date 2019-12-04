@@ -12,7 +12,7 @@ Network Architecture Search System
 ## Usage
 To run on lab servers,
 ```
-python main.py --task cifer100 --gpu 0
+python main.py --task cifar100 --gpu 0
 ```
 
 To run batch script on reedbush,
