@@ -104,3 +104,6 @@ venv.bak/
 .mypy_cache/
 
 .vscode
+run.sh.e*
+run.sh.o*
+

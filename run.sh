@@ -4,10 +4,13 @@
 #PBS -l select=1:mpiprocs=1:ompthreads=1
 #PBS -W group_list=gk75
 #PBS -l walltime=24:00:00
+GROUP=gk75
+USER=k75018
 
-LUSTRE=/lustre/gk**/k*****
+LUSTRE=/lustre/${GROUP}/${USER}
 
 PBS_O_WORKDIR=$LUSTRE/mil-seminar2019/src
+
 
 cd $PBS_O_WORKDIR
 . /etc/profile.d/modules.sh
@@ -20,4 +23,4 @@ eval "$(pyenv init -)"
 export PYTHONUSERBASE=$LUSTRE/python_packages
 export PYTHONPATH=$LUSTRE
 
-python main.py --task cifer100 --gpu 0
+python $PBS_O_WORKDIR/main.py --task cifer100 --gpu 0 > output.log
