@@ -1,14 +1,13 @@
 from argparse import Namespace
-from typing import Type
 
 import torch.nn as nn
 from torch.nn import Module
+from torchvision.transforms import Compose
 
-from preprocess import BasePreprocessor
 from task import Task
 
 
-def nas(args: Namespace, task: Task, preprocess_func: Type[BasePreprocessor]) -> Module:
+def nas(args: Namespace, task: Task, preprocess_func: Compose) -> Module:
     ''' Network Architecture Search method
 
     Given task and preprocess function, this method returns a model output by NAS.
