@@ -7,8 +7,8 @@ class Task:
     """
 
     def __init__(self, task_name):
-        if task_name == 'cifer100':
-            self.name = 'cifer100'
+        if task_name == 'cifar100':
+            self.name = 'cifar100'
             self.type = 'classification'
             self.n_classes = 100
             self.input = 'rgb_image'
